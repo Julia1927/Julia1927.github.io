@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>QA Engineer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="51mXMOBR33o.jpg" alt="Мое фото" class="profile-img">
+            <h1>Медведева Юлия Генадьевна</h1>
+            <p>QA Engineer | Тестировщик</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section id="about">
+            <h2>Обо мне</h2>
+            <p>Привет! Я профессиональный тестировщик с 3-летним опытом работы. Специализируюсь на тестировании современных веб-сайтов и приложений.</p>
+            <p>В свободное время люблю изучать новые технологии.</p>
+        </section>
+        
+        <section id="skills">
+            <h2>Мои навыки</h2>
+            <div class="skills">
+                <span class="skill">Функциональное тестирование</span>
+                <span class="skill">SQL</span>
+                <span class="skill">SOAP</span>
+                <span class="skill">REST</span>
+                <span class="skill">JSON</span>
+                <span class="skill">XML</span>
+                <span class="skill">HTTP/HTTPS</span>
+                <span class="skill">API</span>
+                <span class="skill">Postman</span>
+                <span class="skill">TestIT</span>
+                <span class="skill">Swagger</span>
+                <span class="skill">Redis</span>
+                <span class="skill">Jaeger UI</span>
+                <span class="skill">Jira</span>
+                <span class="skill">Apache Kafka</span>
+                <span class="skill">Figma</span>
+                <span class="skill">Atlassian Confluence</span>
+                <span class="skill">DBeaver</span>
+                <span class="skill">Charles</span>
+                <span class="skill">Docker</span>
+                <span class="skill">Aallure</span>
+                <span class="skill">Git</span>
+            </div>
+        </section>
+        <section id="portfolio">
+            <h2>Портфолио</h2>
+            <p>Здесь будут примеры моих работ. Скоро добавлю!</p>
+        </section>
+        
+        <section id="contact">
+            <h2>Контакты</h2>
+            <ul class="contact-list">
+                <li><img class="img" src="gmail.png">: <a href="mailto:ulka1927@gmail.com">ulka1927@gmail.com</a></li>
+                <li><img class="img" src="git.png">: <a href="https://github.com/Julia1927" target="_blank">github.com/Julia1927</a></li>
+                <li><img class="img" src="vk.png" alt="">: <a href="https://vk.com/ulka1927">Юлька Медведева</a></li>
+                <li><img class="img" src="tel.png">: <a href="tel:+79313620896">+7 (931) 3620896</a></li>
+                <li><img class="img" src="telegram.png">: <a href="https://t.me/julia_1927">@julia_1927</a></li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Моя визитка. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Сайт загружен!');
+            
+            const skills = document.querySelectorAll('.skill');
+            
+            skills.forEach(skill => {
+                skill.addEventListener('mouseover', function() {
+                    this.style.transform = 'scale(1.1)';
+                    this.style.transition = 'transform 0.3s';
+                });
+                
+                skill.addEventListener('mouseout', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
