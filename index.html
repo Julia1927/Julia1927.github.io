@@ -7,21 +7,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.png" type="image/png">
+    
 </head>
 <body>
-    <header>
+     <!-- Добавляем кнопку бургер-меню в header -->
+     <header>
         <div class="container header-container">
-            <div class="logo"><img src="80x80.png" alt="Logo"></div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Главная</a></li>
-                    <li><a href="#about">Навыки</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                </ul>
-            </nav>
+          <div class="logo"><img src="80x80.png" alt="Logo"></div>
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav>
+            <ul>
+                <li>
+                    <a href="#home">
+                      <i class="fas fa-home"></i> Главная
+                    </a>
+                </li>
+                <li>
+                    <a href="#about">
+                      <i class="fas fa-laptop-code"></i> Навыки
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                      <i class="fas fa-address-book"></i> Контакты
+                    </a>
+                </li>
+            </ul>
+          </nav>
         </div>
-    </header>
-    
+      </header>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
@@ -223,5 +242,24 @@
             form.reset();
         });
     </script>
+
+    <script>
+        // JavaScript для бургер меню 
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+        this.classList.toggle('active');
+        document.querySelector('nav').classList.toggle('active');
+        document.body.classList.toggle('no-scroll');
+        });
+
+        // Закрытие меню при клике на пункт
+        document.querySelectorAll('nav ul li a').forEach(item => {
+          item.addEventListener('click', () => {
+            document.querySelector('.menu-toggle').classList.remove('active');
+            document.querySelector('nav').classList.remove('active');
+            document.body.classList.remove('no-scroll');
+          });
+        });
+    </script>
+
 </body>
 </html>
